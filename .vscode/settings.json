@@ -34,8 +34,8 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.volar": false
     }
-},
-"[javascript]": {
+  },
+  "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-}
+  }
 }

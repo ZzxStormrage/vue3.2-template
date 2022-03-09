@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-03-08 18:40:52
- * @LastEditTime: 2022-03-08 19:16:33
+ * @LastEditTime: 2022-03-09 15:15:25
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /my-vue-app/.eslintrc.js
@@ -18,12 +18,17 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended' // 合并eslint-plugin-prettier和eslint-config-prettier 配置
   ],
+  globals: {
+    defineEmits: 'readonly',
+    defineProps: 'readonly'
+  },
   parserOptions: {
     ecmaVersion: 2021
   },
   plugins: ['vue'],
   rules: {
     'prettier/prettier': 'error',
+    'vue/require-default-prop': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': [0, { 'packageDir ': './src/' }],
     'max-len': [
