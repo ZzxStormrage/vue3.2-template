@@ -1,13 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2022-03-08 18:33:58
- * @LastEditTime: 2022-03-09 11:08:13
+ * @LastEditTime: 2022-03-17 18:45:18
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /my-vue-app/vite.config.js
  */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
 
 import path from 'path'
 
@@ -19,5 +20,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src')
     }
   },
-  plugins: [vue()]
+  plugins: [
+    vue(),
+    AutoImport({
+      imports: ['vue', 'vue-router'] // 自动导入vue和vue-router相关函数
+    })
+  ]
 })
