@@ -11,6 +11,8 @@
 
 本项目 是最简版 Vue3.2 模板项目 内置 vscode settings.json 文件自动保存代码
 
+自动导入 api 和 包
+
 使用 Vscode 编辑器 需要安装 [volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) 并且禁用 Vetur
 
 ### main 分支为最基础版本
